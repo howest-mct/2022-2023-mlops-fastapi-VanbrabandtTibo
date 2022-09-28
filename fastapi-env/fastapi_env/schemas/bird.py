@@ -10,5 +10,9 @@ class Bird(BaseModel):
     recon: list
     food: dict
     see: str
+
+    class Config:
+        orm_mode = True
+
     def sayHello(self):
-        pass
+        return f"Hello Bird {self.name}!"
